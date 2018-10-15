@@ -18,8 +18,7 @@ def reg_interest(image):
 	pgns = np.array([[(200,h),(1100, h), (550, 250)]])
 	mask = np.zeros_like(image)
 	cv2.fillPoly(mask, pgns, 255)
-	masked_im = cv2.bitwise_and(image, mask)
-	return masked_im
+	return mask
 
 
 image = cv2.imread('test_image.jpg')
