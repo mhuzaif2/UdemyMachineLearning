@@ -20,8 +20,8 @@ def sigmoid(z):
 	return 1/(1 + np.exp(-z))
 
 def grad_desc(w, data, label):
-	alpha = 0.01
-	while calc_err(w, data, label)>0.01:
+	alpha = 0.05
+	while calc_err(w, data, label)>0.3:
 	# for i in range(5000):
 		del_E = grad(w, data, label)
 		# print(del_E)
